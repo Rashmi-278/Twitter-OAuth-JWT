@@ -5,11 +5,11 @@ function SignIn() {
     <form
       action={async () => {
         "use server";
-        await signIn("github");
+        await signIn("twitter");
       }}
     >
       <p>You are not logged in</p>
-      <button type="submit">Sign in with GitHub</button>
+      <button type="submit">Sign in with Twitter</button>
     </form>
   );
 }

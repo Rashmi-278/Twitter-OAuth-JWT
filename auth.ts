@@ -1,5 +1,5 @@
 import NextAuth from "next-auth";
-import GitHub from "next-auth/providers/github";
+import Twitter from "next-auth/providers/twitter";
 
 export const {
   handlers: { GET, POST },
@@ -7,5 +7,8 @@ export const {
   signIn,
   signOut,
 } = NextAuth({
-  providers: [GitHub],
+  providers: [Twitter],
+  session: {
+    strategy: 'jwt'
+  }
 });
